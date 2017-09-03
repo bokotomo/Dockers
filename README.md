@@ -42,8 +42,19 @@ docker-compose up -d
 curl -X POST -d text=ok 127.0.0.1:5000/api/v1/send
 ```
 
+## tomo-wordpress
+```
+cd tomo-wordpress
+docker-compose up -d
+```
+
 ## mysql接続
 ```
 mysql -h127.0.0.1 -P3306 -pdev -udev -Ddev
 ```
+
+## qiita
+http://qiita.com/bokotomo/items/dc66e3df1279bf8435a9
+
+
 
