@@ -20,7 +20,17 @@ docker-compose -up -d
 ```
 cd tomo-php7-mysql-phpmyadmin
 docker-compose -up -d
-mysql -h127.0.0.1 -P3306 -pdev -udev -Ddev
 ```
 
+## django
+```
+cd tomo-django
+docker-compose run web django-admin.py startproject test .
+docker-compose up
+```
+
+## mysql接続
+```
+mysql -h127.0.0.1 -P3306 -pdev -udev -Ddev
+```
 
