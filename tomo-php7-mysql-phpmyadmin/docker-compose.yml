@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  php7-apache:
+    image: php:7.1.9-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+  mysql:
+    image: mysql:8.0.2
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: dev
+      MYSQL_PASSWORD: dev
+      MYSQL_DATABASE: dev
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql
+    volumes:
+      - ./phpmyadmin/sessions:/sessions
+
