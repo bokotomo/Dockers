@@ -6,7 +6,13 @@ https://hub.docker.com/u/bokotomo/
 
 ## apche2.4
 ```
-cd tomo-apache2-4
+cd tomo-apache
+docker-compose -up -d
+```
+
+## nginx1.13
+```
+cd tomo-nginx
 docker-compose -up -d
 ```
 
@@ -26,7 +32,14 @@ docker-compose -up -d
 ```
 cd tomo-django
 docker-compose run web django-admin.py startproject test .
-docker-compose up
+docker-compose up -d
+```
+
+## tomo-slack-post
+```
+cd tomo-slack-post
+docker-compose up -d
+curl -X POST -d text=ok 127.0.0.1:5000/api/v1/send
 ```
 
 ## mysql接続
