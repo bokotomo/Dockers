@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  rocketchat:
+    image: rocket.chat:latest
+    ports:
+      - "8080:3000"
+    links:
+      - db
+    environment:
+      - ROOT_URL=http://localhost
+  db:
+    image: mongo:latest
