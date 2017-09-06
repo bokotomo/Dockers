@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  rocketchat:
+    image: tensorflow/tensorflow
+    ports:
+      - "8080:8888"
+    environment:
+      - PASSWORD=tomo
+
